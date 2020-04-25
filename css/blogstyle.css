@@ -1,3 +1,4 @@
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -14,7 +15,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #393b3b00;
+    background-color: #757c77aa;
     color: #20d1d1;
     position: fixed;
     z-index: 99;
@@ -61,24 +62,65 @@ body {
     background-color: #555;
 }
 
-@media(max-width: 500px) {
+.toggleNav{
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.buttonLine{
+    margin: 3px auto;
+    width: 70%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+}
+
+@media(max-width: 730px) {
     .brand-title {
-        text-align: center;
-    }
-    .navbar-links {
         display: flex;
-        width: 100%;
+        font-family: 'Courier New', Courier, monospace;
     }
+
+    .brand-title p{
+        font-size: 2rem;
+    }
+
+    .toggleNav{
+        visibility: visible;
+    }
+
     .navbar {
-        flex-direction: column;
+        background-color: #757c77ee;
+        flex-direction: row;
         align-items: flex-start;
     }
+ 
+    .navbar-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-links-disappear{
+        display: none;
+    }
+
     .navbar-links ul {
         width: 100%;
         flex-direction: column;
     }
     .navbar-links li {
+        border-bottom: solid 1px #000000;
+        background-color: #ffffff;
         text-align: center;
+        border-radius: 5px;
     }
     .navbar-links li a {
         padding: .5rem 1rem;
@@ -134,7 +176,7 @@ body {
 .blog-title {
     margin: 0px 0px;
     padding: 0;
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
     text-shadow: 2px 2px 8px rgb(0, 0, 0);
@@ -147,7 +189,7 @@ body {
 .blog-text {
     padding: 30px;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 300;
     text-align: left;
 }
@@ -180,14 +222,15 @@ body {
 }
 
 .button{
-    width: 180px;
+    width: 120px;
     height: 40px;
-    background-color: aqua;
+    background-color: #00ffff;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color:black;
 }
 
 .button>a{
@@ -197,4 +240,14 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     color:black;
+}
+
+.blog1{
+    background-color: #297076;
+}
+
+.blog2{
+    background-color:#d8d83d;
+    animation-name: moveleft;
+    color: #000000;
 }
