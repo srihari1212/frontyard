@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preprocessing Data</title>
+    <link rel="stylesheet" href="css/blogPageStyle.css">
+</head>
+
+<body>
+
+    <div class="content-wrapper ">
+        <div class="container container-blue">
+            <div class="intro-content">
+                <h1>PREPROCESSING DATA</h1>
+            </div>
+        </div>
+
+
+        <div class="content">
+            <p>
+                <p>
+                    We all know that the quality of food determines the health of a human being. Here, the quality of
+                    data
+                    feeded determines the performance of an algorithm.
+                    The quality refers to the preprocessed data. There are various steps and methods to preprocess the
+                    data.
+                    Some of the methods are,
+                </p>
+                <ul>
+                    <li>
+                        <h3>
+                            HANDLING MISSING VALUES
+                        </h3>
+                        <ol>
+                            <li><b>Mean, Median, Mode,Multiple imputation:</b>imputation is the process of replacing
+                                missing data with
+                                substituted values.These values could be mean, median,mode of the data.</li>
+                            <li><b>Prediction of columns with missing values:</b>If there are missing values in the
+                                input columns, we
+                                can handle this condition by predicting these values using certain algorithm.</li>
+                            <li><b>Omitting the Columns:</b>we can omit a particular column when it has more than 50% of
+                                missing
+                                values.</li>
+                            <li><b>Creating a category:</b>The most common and popular approach is to model the missing
+                                value in a
+                                categorical column as a new category called “Unknown.”</li>
+                            <li><b>Go on with algorithms that support missing values:</b>we can use certain machine
+                                learning algorithms
+                                to find the missing values.</li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>
+                            FEATURE SELECTION
+                        </h3>
+                        <ol>
+                            <li>
+                                <h4>
+                                    Filter method:
+                                </h4>
+                                <ul>
+                                    <li>
+                                        <h5>
+                                            Correlation:
+                                        </h5>
+                                        Generally correlation is a measure of relationship between the features. If two
+                                        features are highly correlated then both of the features affect the target in a
+                                        similar way. So, we can select one of the feature for fitting the model. Thus
+                                        correlation helps us in selecting the features for our model generation. There
+                                        are three types of correlation,
+                                        <ol>
+                                            <li>Positive correlation - shampoo and hair length, Body temperature and
+                                                water
+                                                intake.</li>
+                                            <li>Negative correlation - Speed and time taken to reach the destination.
+                                            </li>
+                                            <li> No correlation- The number of freckles on a person’s face and the
+                                                number of T
+                                                shirts
+                                                they have.</li>
+                                        </ol>
+
+
+                                    </li>
+                                    <li>
+                                        <h5>
+                                            LDA:
+                                        </h5>
+                                        Linear discriminant analysis is used to find a linear combination of features
+                                        that characterizes or separates two or more classes (or levels) of a categorical
+                                        variable
+                                    </li>
+                                    <li>
+                                        <h5>
+                                            Anova:
+                                        </h5>
+                                        Analysis of variance (ANOVA) is a collection of statistical models and their
+                                        associated estimation procedures (such as the "variation" among and between
+                                        groups) used to analyze the differences among group means in a sample.
+                                    </li>
+                                    <li>
+                                        <h5>
+                                            Chi-Square:
+                                        </h5>
+                                        chi-squared test is used to determine whether there is a statistically
+                                        significant difference (i.e., a magnitude of difference that is unlikely to be
+                                        due to chance alone) between the expected frequencies and the observed
+                                        frequencies in one or more categories of a so-called contingency table.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>
+                                    Wrapper method:
+                                </h4>
+                                <ul>
+                                    <li> Forward Selection:
+                                        Forward selection is an iterative method in which we start with having no
+                                        feature in the model. In each iteration, we keep adding the feature which best
+                                        improves our model till an addition of a new variable does not improve the
+                                        performance of the model.</li>
+                                    <li>Backward Elimination:
+                                        In backward elimination, we start with all the features and removes the least
+                                        significant feature at each iteration which improves the performance of the
+                                        model. We repeat this until no improvement is observed on removal of features.
+                                    </li>
+                                    <li>Recursive Feature elimination:
+                                        It is a greedy optimization algorithm which aims to find the best performing
+                                        feature subset. It repeatedly creates models and keeps aside the best or the
+                                        worst performing feature at each iteration. It constructs the next model with
+                                        the left features until all the features are exhausted. It then ranks the
+                                        features based on the order of their elimination.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>
+                                    Embedded method:
+                                </h4>
+                                <b>Lasso and Ridge regression:</b>
+                                <p>
+                                    Ridge and Lasso regression are some of the simple techniques to reduce model
+                                    complexity and prevent over- fitting which may result from simple linear regression.
+                                </p>
+
+                                <p>
+                                    In Ridge regression, the cost function is altered by adding a penalty equivalent to
+                                    square of the magnitude of the coefficients.
+                                </p>
+
+                                <p>
+                                    Lasso regression not only helps in reducing over- fitting but it can help us in
+                                    feature selection.
+                                </p>
+                            </li>
+                            <li>
+                                <h4>
+                                    Curse of dimensionality:
+                                </h4>
+                                The curse of dimensionality refers to the phenomena that occur when classifying,
+                                organizing, and
+                                analyzing high dimensional data that does not occur in low dimensional spaces,
+                                specifically the
+                                issue of
+                                data sparsity and “closeness” of data.
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3>
+                            REMOVING DUPLICATE DATA:
+                        </h3>
+                        While training a supervised learning algorithm, the usual assumptions are that:
+                        <ol>
+                            <li>
+                                Data points are independent and identically distributed
+                            </li>
+                            <li>
+                                Training and testing data is sampled from the same distribution
+                            </li>
+                        </ol>
+                        In light of these assumptions, you should not throw out the identical data points.
+                    </li>
+                    <li>
+                        <h3>
+                            DATA WRANGLING OR DATA MUNGING:
+                        </h3>
+                        Data wrangling is the process of cleaning, structuring and enriching raw data into a desired
+                        format for
+                        better decision making in less time
+                    </li>
+                </ul>
+            </p>
+            <!-- <div class="blog-navigator">
+                <div class="btn btn-previous"></div>
+                <div class="btn btn-next"></div>
+            </div> -->
+        </div>
+    </div>
+
+</body>
+
+</html>
